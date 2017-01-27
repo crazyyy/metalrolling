@@ -1,9 +1,10 @@
-<!doctype html>
-<html <?php language_attributes(); ?> class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="<?php bloginfo( 'charset' ); ?>">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
 
   <title><?php wp_title( '' ); ?><?php if ( wp_title( '', false ) ) { echo ' :'; } ?> <?php bloginfo( 'name' ); ?></title>
 
@@ -21,27 +22,47 @@
   <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<!-- wrapper -->
-<div class="wrapper">
-  <header role="banner">
-    <div class="inner">
-
-      <div class="logo">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          <a href="<?php echo home_url(); ?>">
-        <?php } ?>
-            <img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt="<?php wp_title( '' ); ?>" title="<?php wp_title( '' ); ?>" class="logo-img">
-        <?php if ( !is_front_page() && !is_home() ){ ?>
-          </a>
-        <?php } ?>
-      </div><!-- /logo -->
-
-      <nav class="nav" role="navigation">
+  <div id="wrapper">
+    <div id="header-wrap">
+      <header id="header">
+        <div class="company">
+          <div class="company-logo">
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/site-logo_2.png" alt=""></a>
+          </div>
+          <div class="company-name">Название компании</div>
+          <div class="company-desc">Металлопрокат</div>
+        </div>
+        <div class="header-container">
+          <div class="top-but text-shadow">
+            <a href="/online---zayavka">Online - заявка</a>
+          </div>
+          <div class="site-phone">
+            <div class="phone-site">
+              <a href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a>
+            </div>
+            <div class="phone-site">
+              <a href="tel:8 (000) 111-11-11">8 (000) 111-11-11</a>
+            </div>
+          </div>
+          <div class="site-mail">
+            <a href="mailto:login@domain.ru">login@domain.ru</a>
+          </div>
+        </div>
+      </header>
+      <!-- #header-->
+      <div class="clearfix"></div>
+    </div>
+    <div class="nav-top clearfix">
+      <div class="nav-top-in">
         <?php wpeHeadNav(); ?>
-      </nav><!-- /nav -->
+        <div class="search-wrap">
+          <form action="/search" method="get" class="search">
+            <input name="search" type="text" placeholder="Поиск по сайту..." value="">
+            <input type="submit" value="">
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
 
-    </div><!-- /.inner -->
-  </header><!-- /header -->
-
-  <section role="main">
-    <div class="inner">
+    <div id="middle" class="side-left clearfix">
