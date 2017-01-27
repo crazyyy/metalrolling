@@ -1,4 +1,6 @@
-if(window._s3Lang === undefined) window._s3Lang = {code: 'ru'};
+if (window._s3Lang === undefined) window._s3Lang = {
+  code: 'ru'
+};
 window._s3Lang['JS_ADDED'] = "Добавлено";
 window._s3Lang['JS_ALL_OPTIONS'] = "Все параметры";
 window._s3Lang['JS_AVAILABLE_ONLY'] = "В наличии только";
