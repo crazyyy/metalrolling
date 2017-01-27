@@ -1,7 +1,7 @@
 <?php
-define('DB_NAME', 'DBNAME');
-define('DB_USER', 'DBUSER');
-define('DB_PASSWORD', 'DBPASS');
+define('DB_NAME', 'metalrolling');
+define('DB_USER', 'metalrolling');
+define('DB_PASSWORD', 'metalrolling');
 
 define('DB_HOST', 'localhost');
 
