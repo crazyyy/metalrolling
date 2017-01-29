@@ -131,7 +131,7 @@ function wpeFootNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="footernav">%3$s</ul>',
+    'items_wrap'      => '<ul class="menu-bot">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )
@@ -154,7 +154,7 @@ function wpeSideNav() {
     'after'           => '',
     'link_before'     => '',
     'link_after'      => '',
-    'items_wrap'      => '<ul class="sidebarnav">%3$s</ul>',
+    'items_wrap'      => '<ul class="menu-left">%3$s</ul>',
     'depth'           => 0,
     'walker'          => ''
     )

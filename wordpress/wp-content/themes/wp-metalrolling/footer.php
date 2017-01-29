@@ -1,29 +1,7 @@
     </div>
     <!-- #middle-->
     <footer id="footer">
-      <ul class="menu-bot">
-        <li>
-          <a class="activ" href="/">Главная</a>
-        </li>
-        <li>
-          <a href="/o-kompanii">О компании</a>
-        </li>
-        <li>
-          <a href="/fillialy">Филлиалы</a>
-        </li>
-        <li>
-          <a href="/sotrudnichestvo">Сотрудничество</a>
-        </li>
-        <li>
-          <a href="/partnery">Партнеры</a>
-        </li>
-        <li>
-          <a href="/news">Новости</a>
-        </li>
-        <li>
-          <a href="/kontakty1">Контакты</a>
-        </li>
-      </ul>
+      <?php wpeFootNav(); ?>
       <div id="footer-container">
         <div class="left-container-in">
           <div class="site-name-bot">

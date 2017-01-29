@@ -56,7 +56,7 @@
       <div class="nav-top-in">
         <?php wpeHeadNav(); ?>
         <div class="search-wrap">
-          <form action="/search" method="get" class="search">
+          <form  method="get" action="<?php echo home_url(); ?>" role="search" class="search">
             <input name="search" type="text" placeholder="Поиск по сайту..." value="">
             <input type="submit" value="">
           </form>
