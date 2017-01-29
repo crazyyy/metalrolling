@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x - Administration package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-01-04 23:10:17+0000\n"
+"PO-Revision-Date: 2017-01-27 19:24:08+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -448,7 +448,7 @@ msgstr "На жаль, вам не дозволено оновлювати це�
 
 #: wp-admin/themes.php:256 wp-admin/themes.php:386
 msgid "New version available. <button class=\"button-link\" type=\"button\">Update now</button>"
-msgstr "Доступна нова версія. <button class=\"button-link\" type=\"button\">Оновити</button>"
+msgstr "Доступна нова версія. <button class=\"button-link\" type=\"button\">Оновити зараз</button>"
 
 #: wp-admin/theme-install.php:140
 msgid "The Theme Installer screen requires JavaScript."
@@ -896,7 +896,7 @@ msgstr "Налаштування збережені та тема активов
 #: wp-admin/freedoms.php:46 wp-admin/theme-install.php:86
 #: wp-admin/themes.php:92
 msgid "https://wordpress.org/themes/"
-msgstr "https://wordpress.org/themes/"
+msgstr "https://uk.wordpress.org/themes/"
 
 #: wp-admin/users.php:174
 msgid "Sorry, you are not allowed to delete that user."
@@ -2290,7 +2290,7 @@ msgstr "Стандартний редактор"
 
 #: wp-admin/includes/file.php:1207
 msgid "example: www.wordpress.org"
-msgstr "приклад: www.uk.wordpress.org"
+msgstr "приклад: www.wordpress.org"
 
 #: wp-admin/theme-install.php:56 wp-admin/themes.php:141
 msgid "Number of Themes found: %d"
@@ -3190,7 +3190,7 @@ msgstr "&larr; Повернутися до редактора"
 
 #: wp-admin/maint/repair.php:147
 msgid "https://wordpress.org/support/forum/how-to-and-troubleshooting"
-msgstr "http://ru.forums.wordpress.org/forum/how-to-and-troubleshooting"
+msgstr "https://uk.wordpress.org/support/forum/how-to-and-troubleshooting"
 
 #: wp-admin/index.php:68
 msgid "<strong>At A Glance</strong> &mdash; Displays a summary of the content on your site and identifies which theme and version of WordPress you are using."
@@ -3254,7 +3254,7 @@ msgstr "У більшості випадків WordPress буде встанов
 
 #: wp-admin/update-core.php:560
 msgid "<strong>WordPress</strong> &mdash; Updating your WordPress installation is a simple one-click procedure: just <strong>click on the &#8220;Update Now&#8221; button</strong> when you are notified that a new version is available."
-msgstr "<strong>WordPress</strong> &mdash; оновити WordPress дуже легко; достатньо <strong>натиснути на кнопку \"Оновити\"</strong>, коли буде доступна нова версія."
+msgstr "<strong>WordPress</strong> &mdash; оновити WordPress дуже легко; достатньо <strong>натиснути на кнопку \"Оновити зараз\"</strong>, коли буде доступна нова версія."
 
 #: wp-admin/update-core.php:552
 msgid "If an update is available, you&#8127;ll see a notification appear in the Toolbar and navigation menu."
@@ -5022,7 +5022,7 @@ msgstr "Текст заголовку"
 #: wp-admin/includes/theme.php:203 wp-admin/includes/update.php:402
 #: wp-admin/includes/update.php:547
 msgid "There is a new version of %1$s available. <a href=\"%2$s\" %3$s>View version %4$s details</a> or <a href=\"%5$s\" %6$s>update now</a>."
-msgstr "Доступна нова версія %1$s. <a href=\"%2$s\" %3$s>Переглянути деталі версії %4$s</a> або <a href=\"%5$s\" %6$s>оновити</a>."
+msgstr "Доступна нова версія %1$s. <a href=\"%2$s\" %3$s>Переглянути деталі версії %4$s</a> або <a href=\"%5$s\" %6$s>оновити зараз</a>."
 
 #: wp-admin/includes/plugin.php:179
 msgid "By %s."
@@ -6730,7 +6730,7 @@ msgstr "Пошук сайтів"
 
 #: wp-admin/includes/dashboard.php:1097
 msgid "http://wordpress.org/news/feed/"
-msgstr "http://feeds.feedburner.com/uawordpress"
+msgstr "http://wordpress.org/news/feed/"
 
 #: wp-admin/includes/dashboard.php:1088
 msgid "https://wordpress.org/news/"

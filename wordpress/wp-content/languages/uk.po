@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the WordPress - 4.7.x package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2017-01-26 15:55:05+0000\n"
+"PO-Revision-Date: 2017-01-27 19:07:17+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -2251,10 +2251,6 @@ msgctxt "password strength"
 msgid "Password strength unknown"
 msgstr "Сила паролю невідома"
 
-#: wp-includes/script-loader.php:642
-msgid "Update Now"
-msgstr "Оновити"
-
 #: wp-includes/revision.php:550
 msgid "Sorry, you are not allowed to preview drafts."
 msgstr "На жаль, ви не можете здійснювати попередній перегляд чернеток."
@@ -2288,6 +2284,10 @@ msgstr "Будь ласка, оберіть щонайменше один еле
 #: wp-includes/script-loader.php:412
 msgid "Confirm use of weak password"
 msgstr "Дозволити використання слабкого паролю."
+
+#: wp-includes/script-loader.php:642
+msgid "Update Now"
+msgstr "Оновити зараз"
 
 #: wp-includes/formatting.php:4245
 msgid "https://codex.wordpress.org/Using_Permalinks#Choosing_your_permalink_structure"
@@ -7603,10 +7603,6 @@ msgstr "Додати нову категорію"
 msgid "New Category Name"
 msgstr "Назва нової категорії"
 
-#: wp-includes/taxonomy.php:506
-msgid "New Tag Name"
-msgstr "Назва нового теґу"
-
 #: wp-includes/taxonomy.php:500
 msgid "Parent Category"
 msgstr "Батьківська категорія"
@@ -7614,10 +7610,6 @@ msgstr "Батьківська категорія"
 #: wp-includes/taxonomy.php:501
 msgid "Parent Category:"
 msgstr "Батьківська категорія: "
-
-#: wp-includes/taxonomy.php:504
-msgid "Update Tag"
-msgstr "Оновити теґ"
 
 #: wp-includes/taxonomy.php:495
 msgctxt "taxonomy general name"
@@ -7644,6 +7636,14 @@ msgstr "Популярні позначки"
 #: wp-includes/taxonomy.php:497
 msgid "Search Tags"
 msgstr "Шукати позначки"
+
+#: wp-includes/taxonomy.php:504
+msgid "Update Tag"
+msgstr "Оновити позначку"
+
+#: wp-includes/taxonomy.php:506
+msgid "New Tag Name"
+msgstr "Назва нової позначки"
 
 #: wp-signup.php:760
 msgid "Wait a little longer. Sometimes delivery of email can be delayed by processes outside of our control."
