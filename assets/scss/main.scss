@@ -139,7 +139,7 @@ figure {
 }
 
 hr {
-  -moz-box-sizing: content-box;
+
        box-sizing: content-box;
   height: 0;
 }
@@ -545,7 +545,8 @@ h6 {
 
   background: #292929 url(../img/top-pt.png) center top repeat;
   #header {
-    width: 984px;
+    // width: 984px;
+    width: 1140px;
     min-height: 141px;
     margin: 0 auto;
   }
@@ -702,7 +703,8 @@ h6 {
   border-bottom: 4px solid #ffc600;
   background: #ffd200;
   .nav-top-in {
-    width: 966px;
+    // width: 966px;
+    width: 1140px;
     min-height: 58px;
     margin: 0 auto;
     padding: 0 0 6px 1px;
@@ -878,9 +880,10 @@ h6 {
 
 #middle {
   position: relative;
-
-  width: 982px;
+  // width: 982px;
   /* height: 1%; */
+
+  width: 1140px;
   margin: 0 auto;
   padding-bottom: 180px;
 
@@ -1308,8 +1311,9 @@ h6 {
 
 #footer {
   position: relative;
+  // width: 984px;
 
-  width: 984px;
+  width: 1140px;
   max-width: 100%;
   min-height: 180px;
   margin: 0 auto;
@@ -1322,8 +1326,9 @@ h6 {
   position: relative;
 
   display: inline-block;
+  // width: 924px;
 
-  width: 924px;
+  width: 1082px;
   min-height: 41px;
   margin: 0 0 -7px;
   padding: 0 29px;
@@ -1357,16 +1362,28 @@ h6 {
         position: relative;
 
         color: #ffd200;
-        -webkit-border-radius: 4px;
-           -moz-border-radius: 4px;
-                border-radius: 4px;
+        border-radius: 4px;
         background: #292929 url(../img/top-pt.png) center top repeat;
-        -webkit-background-clip: padding;
-           -moz-background-clip: padding;
-                background-clip: padding-box;
+        background-clip: padding-box;
 
-            -ms-border-radius: 4px;
-             -o-border-radius: 4px;
+        behavior: url(../assets/pie.htc);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &.current-menu-item {
+      a {
+        font-family: 'Roboto-Regular';
+        font-size: 12px;
+
+        position: relative;
+
+        color: #ffd200;
+        border-radius: 4px;
+        background: #292929 url(../img/top-pt.png) center top repeat;
+        background-clip: padding-box;
+
         behavior: url(../assets/pie.htc);
         &:hover {
           text-decoration: none;
@@ -1382,15 +1399,12 @@ h6 {
   display: inline-block;
 
   width: 984px;
+  width: 1140px;
   min-height: 112px;
 
-  -webkit-border-radius: 0 0 3px 3px;
-     -moz-border-radius: 0 0 3px 3px;
-          border-radius: 0 0 3px 3px;
+  border-radius: 0 0 3px 3px;
   background: #292929 url(../img/top-pt.png) center top repeat;
 
-      -ms-border-radius: 0 0 3px 3px;
-       -o-border-radius: 0 0 3px 3px;
   behavior: url(../assets/pie.htc);
   .left-container-in {
     font-family: 'Roboto-Regular';
@@ -1497,7 +1511,7 @@ h6 {
   float: right;
   overflow: hidden;
 
-  width: 720px;
+  width: 870px;
 }
 .side-left #side-left {
   margin-bottom: 25px;
@@ -1574,6 +1588,8 @@ article {
 .inner-title {
   font-family: Arial,Helvetica,sans-serif;
   font-weight: 400;
+
+  overflow: hidden;
 
   padding: 2px 9px;
 

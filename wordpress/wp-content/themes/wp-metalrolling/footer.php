@@ -29,12 +29,11 @@
   </div>
   <!-- #wrapper -->
 
-  <?php wp_footer(); ?>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/highslide-full.packed.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/jquery.bxslider.min.js"></script>
-  <script src="<?php echo get_template_directory_uri(); ?>/js/main.js" charset="utf-8"></script>
 
+
+  <?php wp_footer(); ?>
+
+  <!-- <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> -->
 </body>
 
 </html>

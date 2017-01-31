@@ -519,7 +519,7 @@ class TablePress_Render {
 		$table_attributes = apply_filters( 'tablepress_table_tag_attributes', $table_attributes, $this->table, $this->render_options );
 		$table_attributes = $this->_attributes_array_to_string( $table_attributes );
 
-		$output .= "\n<table{$table_attributes}>\n";
+		$output .= "\n<table data-attr='sis' {$table_attributes}>\n";
 		$output .= $caption . $colgroup . $thead . $tfoot . $tbody;
 		$output .= "</table>\n";
 

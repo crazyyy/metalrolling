@@ -206,18 +206,18 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 	 * @since 1.0.0
 	 */
 	protected function _enqueue_datatables() {
-		$js_file = 'js/jquery.datatables.min.js';
-		$js_url = plugins_url( $js_file, TABLEPRESS__FILE__ );
-		/**
-		 * Filter the URL from which the DataTables JavaScript library file is loaded.
-		 *
-		 * @since 1.0.0
-		 *
-		 * @param string $js_url  URL of the DataTables JS library file.
-		 * @param string $js_file Path and file name of the DataTables JS library file.
-		 */
-		$js_url = apply_filters( 'tablepress_datatables_js_url', $js_url, $js_file );
-		wp_enqueue_script( 'tablepress-datatables', $js_url, array( 'jquery-core' ), TablePress::version, true );
+		// $js_file = 'js/jquery.datatables.min.js';
+		// $js_url = plugins_url( $js_file, TABLEPRESS__FILE__ );
+		// /**
+		//  * Filter the URL from which the DataTables JavaScript library file is loaded.
+		//  *
+		//  * @since 1.0.0
+		//  *
+		//  * @param string $js_url  URL of the DataTables JS library file.
+		//  * @param string $js_file Path and file name of the DataTables JS library file.
+		//  */
+		// $js_url = apply_filters( 'tablepress_datatables_js_url', $js_url, $js_file );
+		// wp_enqueue_script( 'tablepress-datatables', $js_url, array( 'jquery-core' ), TablePress::version, true );
 	}
 
 	/**
@@ -401,13 +401,13 @@ class TablePress_Frontend_Controller extends TablePress_Controller {
 		}
 
 		// Echo DataTables strings and JS calls.
-		echo <<<JS
-<script type="text/javascript">
-jQuery(document).ready(function($){
-{$datatables_strings}{$commands}
-});
-</script>
-JS;
+// 		echo <<<JS
+// <script type="text/javascript">
+// jQuery(document).ready(function($){
+// {$datatables_strings}{$commands}
+// });
+// </script>
+// JS;
 	}
 
 	/**
@@ -595,7 +595,7 @@ JS;
 			 */
 			$js_options = apply_filters( 'tablepress_table_js_options', $js_options, $table_id, $render_options );
 			$this->shown_tables[ $table_id ]['instances'][ $render_options['html_id'] ] = $js_options;
-			$this->_enqueue_datatables();
+			// $this->_enqueue_datatables();
 		}
 
 		// Check if table output shall and can be loaded from the transient cache, otherwise generate the output.

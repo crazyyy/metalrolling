@@ -20,6 +20,8 @@
   <![endif]-->
   <!-- css + javascript -->
   <?php wp_head(); ?>
+  <link rel="stylesheet" href="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
 </head>
 <body <?php body_class(); ?>>
   <div id="wrapper">
@@ -56,8 +58,8 @@
       <div class="nav-top-in">
         <?php wpeHeadNav(); ?>
         <div class="search-wrap">
-          <form  method="get" action="<?php echo home_url(); ?>" role="search" class="search">
-            <input name="search" type="text" placeholder="Поиск по сайту..." value="">
+          <form  method="get"  name="searchform" action="<?php echo home_url(); ?>" role="search" class="search">
+            <input name="s" type="text" placeholder="Поиск по сайту..." value="">
             <input type="submit" value="">
           </form>
         </div>
