@@ -4414,8 +4414,37 @@ $(function () {
 
 jQuery(document).ready(function ($) {
   if ($('.tablepress').length > 0) {
-    var table = $(this).html();
-    $('.hiddened table').html('table')
-    console.log('zipfile!')
+    $('.tablepress').attr('data-page-length', '30')
   }
+
+  var DataTables_language = {};
+  DataTables_language["ru_RU"] = {
+    "info": "Записи с _START_ до _END_ из _TOTAL_ записей",
+    "infoEmpty": "Записи с 0 до 0 из 0 записей",
+    "infoFiltered": "(отфильтровано из _MAX_ записей)",
+    "infoPostFix": "",
+    "lengthMenu": "Показать _MENU_ записей",
+    "processing": "Подождите...",
+    "search": "Поиск:",
+    "zeroRecords": "Записи отсутствуют.",
+    "paginate": {
+      "first": "Первая",
+      "previous": "Предыдущая",
+      "next": "Следующая",
+      "last": "Последняя"
+    },
+    "aria": {
+      "sortAscending": ": активировать для сортировки столбца по возрастанию",
+      "sortDescending": ": активировать для сортировки столбцов по убыванию"
+    },
+    "decimal": ",",
+    "thousands": "."
+  };
+  $('.tablepress').dataTable({
+    "language": DataTables_language["ru_RU"],
+    "order": [],
+    "orderClasses": false,
+    "stripeClasses": ['even', 'odd'],
+    "pagingType": "simple"
+  });
 });
