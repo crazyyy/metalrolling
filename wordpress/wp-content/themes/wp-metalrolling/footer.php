@@ -29,8 +29,6 @@
   </div>
   <!-- #wrapper -->
 
-
-
   <?php wp_footer(); ?>
 
   <!-- <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script> -->
