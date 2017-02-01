@@ -4415,8 +4415,6 @@ $(function () {
 jQuery(document).ready(function ($) {
   if ($('.tablepress').length > 0) {
     $('.tablepress').attr('data-page-length', '30');
-
-    // $('.tablepress').append('<div>k;ldsk;sd ;lksd;lnkgas;lnkdg lnk;as;gal;snkg;laksng asd;lgf;lgn asdfg;ag;nlk asglknas wKGJMN AASRKMNG ARGMN AS[PKGJ ASGKLMASDLGMA PTG DS </div>')
   }
 
   var DataTables_language = {};
@@ -4456,8 +4454,6 @@ jQuery(document).ready(function ($) {
         var select = $('<select><option value=""></option></select>');
 
         select.appendTo($('.simposium'))
-
-
           .on('change', function () {
             var val = $.fn.dataTable.util.escapeRegex(
               $(this).val()
@@ -4478,7 +4474,5 @@ jQuery(document).ready(function ($) {
 
       });
     }
-
-
   });
 });

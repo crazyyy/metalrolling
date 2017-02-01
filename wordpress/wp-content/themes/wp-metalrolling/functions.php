@@ -657,7 +657,43 @@ function disable_emojicons_tinymce( $plugins ) {
 
 
 
+add_action( 'init', 'post_type_product' );
+function post_type_product() {
 
+  $labels = array(
+    'name'=> 'Products',
+    'singular_name' => 'Products',
+    'add_new' => 'Add',
+    'add_new_item' => 'Add',
+    'edit' => 'Edit',
+    'edit_item' => 'Edit',
+    'new-item' => 'Add',
+    'view' => 'View',
+    'view_item' => 'View',
+    'search_items' => 'Search',
+    'not_found' => 'Not Found',
+    'not_found_in_trash' => 'Not Found',
+    'parent' => 'Parent',
+  );
+
+  $args = array(
+    'labels'             => $labels,
+    'description' => 'Products Post Type',
+    'public' => true,
+    'exclude_from_search' => true,
+    'show_ui' => true,
+    'menu_position' => 3,
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-share-alt',
+    'capability_type' => 'post',
+    'hierarchical' => false,
+    'supports' => array('title','editor','thumbnail'),
+    'rewrite' => array( 'slug' => 'product' ),
+    'show_in_rest' => true
+  );
+
+  register_post_type( 'product' , $args );
+}
 
 
 
