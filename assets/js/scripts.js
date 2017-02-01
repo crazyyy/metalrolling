@@ -4384,11 +4384,11 @@ eval(function (p, a, c, k, e, d) {
 });
 
 
-hs.captionId = 'the-caption';
-hs.outlineType = 'rounded-white';
-window.onload = function () {
-  hs.preloadImages(5);
-}
+// hs.captionId = 'the-caption';
+// hs.outlineType = 'rounded-white';
+// window.onload = function () {
+//   hs.preloadImages(5);
+// }
 
 $(function () {
 
@@ -4414,7 +4414,9 @@ $(function () {
 
 jQuery(document).ready(function ($) {
   if ($('.tablepress').length > 0) {
-    $('.tablepress').attr('data-page-length', '30')
+    $('.tablepress').attr('data-page-length', '30');
+
+    // $('.tablepress').append('<div>k;ldsk;sd ;lksd;lnkgas;lnkdg lnk;as;gal;snkg;laksng asd;lgf;lgn asdfg;ag;nlk asglknas wKGJMN AASRKMNG ARGMN AS[PKGJ ASGKLMASDLGMA PTG DS </div>')
   }
 
   var DataTables_language = {};
@@ -4445,6 +4447,38 @@ jQuery(document).ready(function ($) {
     "order": [],
     "orderClasses": false,
     "stripeClasses": ['even', 'odd'],
-    "pagingType": "simple"
+    "pagingType": "simple",
+
+    initComplete: function () {
+      this.api().columns().every(function () {
+        var column = this;
+
+        var select = $('<select><option value=""></option></select>');
+
+        select.appendTo($('.simposium'))
+
+
+          .on('change', function () {
+            var val = $.fn.dataTable.util.escapeRegex(
+              $(this).val()
+            );
+
+            column
+              .search(val ? '^' + val + '$' : '', true, false)
+              .draw();
+          });
+
+        column.data().unique().sort().each(function (d, j) {
+          if (column.search() === '^' + d + '$') {
+            select.append('<option value="' + d + '" selected="selected">' + d + '</option>')
+          } else {
+            select.append('<option value="' + d + '">' + d + '</option>')
+          }
+        });
+
+      });
+    }
+
+
   });
 });
