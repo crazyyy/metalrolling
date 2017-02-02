@@ -2,11 +2,12 @@
 <?php get_sidebar(); ?>
   <div id="container">
     <div id="content">
-Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis qui maxime voluptas harum aliquam aliquid perferendis consequuntur dolorum natus quod consectetur vel necessitatibus accusamus dolores, repudiandae quam nihil perspiciatis magni.
+
+      <?php get_template_part('slider-wrap'); ?>
 
       <?php if (function_exists('easy_breadcrumbs')) easy_breadcrumbs(); ?>
 
-      <h1 class="cat-title inner-title"><?php the_category(', '); ?></h1>
+      <h1 class="ctitle"><?php _e( 'Latest Posts', 'wpeasy' ); ?></h1>
       <?php get_template_part('loop'); ?>
       <?php get_template_part('pagination'); ?>
 

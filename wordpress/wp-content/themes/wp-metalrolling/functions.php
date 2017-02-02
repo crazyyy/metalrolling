@@ -679,13 +679,12 @@ function disable_emojicons_tinymce( $plugins ) {
   }
 }
 
-
-
-add_action( 'init', 'post_type_product' );
-function post_type_product() {
+// Add Autoren Post Type
+add_action( 'init', 'post_type_products' );
+function post_type_products() {
 
   $labels = array(
-    'name'=> 'Products',
+    'name' => 'Products',
     'singular_name' => 'Products',
     'add_new' => 'Add',
     'add_new_item' => 'Add',
@@ -697,55 +696,28 @@ function post_type_product() {
     'search_items' => 'Search',
     'not_found' => 'Not Found',
     'not_found_in_trash' => 'Not Found',
-    'parent' => 'Parent',
+    'parent' => 'Parent'
   );
 
   $args = array(
-    'labels'             => $labels,
     'description' => 'Products Post Type',
-    'public' => true,
-    'exclude_from_search' => true,
     'show_ui' => true,
     'menu_position' => 3,
-    // https://developer.wordpress.org/resource/dashicons/
-    'menu_icon' => 'dashicons-share-alt',
+    'exclude_from_search' => false,
+    'labels' => $labels,
+    'public' => true,
+    'publicly_queryable' => true,
     'capability_type' => 'post',
     'hierarchical' => false,
     'supports' => array('title','editor','thumbnail'),
-    'rewrite' => array( 'slug' => 'product' ),
+    'has_archive' => true,
+    'rewrite' => array( 'slug' => 'products' ),
+    // https://developer.wordpress.org/resource/dashicons/
+    'menu_icon' => 'dashicons-share-alt',
     'show_in_rest' => true
   );
 
-  register_post_type( 'product' , $args );
-}
-
-add_action( 'init', 'taxonomies_types', 0 );
-function taxonomies_types() {
-  // Add new taxonomy, make it hierarchical (like categories)
-  $labels = array(
-    'name'              => 'Types',
-    'singular_name'     => 'Type',
-    'search_items'      => 'Search',
-    'all_items'         => 'All',
-    'parent_item'       => 'Parent',
-    'parent_item_colon' => 'Parent',
-    'edit_item'         => 'Edit',
-    'update_item'       => 'Update',
-    'add_new_item'      => 'Add',
-    'new_item_name'     => 'Add',
-    'menu_name'         => 'Types',
-  );
-
-  $args = array(
-    'hierarchical'      => true,
-    'labels'            => $labels,
-    'show_ui'           => true,
-    'show_admin_column' => true,
-    'query_var'         => true,
-    'rewrite'           => array( 'slug' => 'type' ),
-  );
-
-  register_taxonomy( 'types', array( 'product' ), $args );
+  register_post_type( 'products' , $args );
 }
 
 ?>
