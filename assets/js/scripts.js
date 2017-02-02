@@ -4460,7 +4460,7 @@ jQuery(document).ready(function ($) {
               .draw();
           });
 
-        column.data().unique().sort().each(function (d, j) {
+        column.data().unique().sort(function(a, b){return a-b}).each(function (d, j) {
           if (column.search() === '^' + d + '$') {
             select.append('<option value="' + d + '" selected="selected">' + d + '</option>')
           } else {
