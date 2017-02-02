@@ -4449,7 +4449,7 @@ jQuery(document).ready(function ($) {
 
         var select = $('<select><option value=""></option></select>');
 
-        select.appendTo($('.simposium'))
+        select.appendTo($('.products-pricetable--filters'))
           .on('change', function () {
             var val = $.fn.dataTable.util.escapeRegex(
               $(this).val()

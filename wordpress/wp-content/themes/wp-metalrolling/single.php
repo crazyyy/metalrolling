@@ -9,6 +9,7 @@
 
       <?php if (have_posts()): while (have_posts()) : the_post(); ?>
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+          <h1 class="page-title inner-title"><?php the_title(); ?></h1>
           <?php the_content(); ?>
           <?php the_tags( __( 'Tags: ', 'wpeasy' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
           <span class="date"><?php the_time('d F Y'); ?> <?php the_time('H:i'); ?></span>

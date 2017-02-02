@@ -1,5 +1,5 @@
 <?php if (have_posts()): while (have_posts()) : the_post(); ?>
-  <div id="post-<?php the_ID(); ?>" <?php post_class('looper'); ?>>
+  <div id="post-<?php the_ID(); ?>" <?php post_class('looper-proder'); ?>>
 
     <a rel="nofollow" class="feature-img" href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
       <?php if ( has_post_thumbnail()) :
@@ -13,9 +13,7 @@
       <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
     </h2><!-- /post title -->
 
-    <span class="date"><?php the_time('j F Y'); ?> </span></span>
-
-    <?php wpeExcerpt('wpeExcerpt40'); ?>
+    <?php the_content(); ?>
 
   </div><!-- /looper -->
   <?php endwhile; else: ?>

@@ -720,4 +720,33 @@ function post_type_products() {
   register_post_type( 'products' , $args );
 }
 
+add_action( 'init', 'taxonomies_type', 0 );
+function taxonomies_type() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => 'Types',
+    'singular_name'     => 'Type',
+    'search_items'      => 'Search',
+    'all_items'         => 'All',
+    'parent_item'       => 'Parent',
+    'parent_item_colon' => 'Parent',
+    'edit_item'         => 'Edit',
+    'update_item'       => 'Update',
+    'add_new_item'      => 'Add',
+    'new_item_name'     => 'Add',
+    'menu_name'         => 'Types',
+  );
+
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'types' ),
+  );
+
+  register_taxonomy( 'types', array( 'products' ), $args );
+}
+
 ?>
