@@ -34,10 +34,9 @@
           <div class="company-name">Название компании</div>
           <div class="company-desc">Металлопрокат</div>
         </div>
-        <div class="header-container">
-          <div class="top-but text-shadow">
-            <a href="/online---zayavka">Online - заявка</a>
-          </div>
+        <div class="header-container clearfix">
+
+          <?php wpeHeadNavTop(); ?>
           <div class="site-phone">
             <div class="phone-site">
               <a href="tel:+7 (000) 000-00-00">+7 (000) 000-00-00</a>

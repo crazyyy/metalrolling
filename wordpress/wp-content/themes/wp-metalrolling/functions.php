@@ -116,6 +116,29 @@ function wpeHeadNav() {
     )
   );
 }
+
+function wpeHeadNavTop() {
+  wp_nav_menu(
+  array(
+    'theme_location'  => 'header-menu-top',
+    'menu'            => '',
+    'container'       => 'div',
+    'container_class' => 'menu-{menu slug}-container',
+    'container_id'    => '',
+    'menu_class'      => 'menu',
+    'menu_id'         => '',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul class="header-container--nav">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+    )
+  );
+}
 // WPE footer navigation
 function wpeFootNav() {
   wp_nav_menu(
@@ -167,6 +190,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 function register_html5_menu() {
   register_nav_menus(array(
     'header-menu' => __('Меню в шапке', 'wpeasy'),
+    'header-menu-top' => __('Меню в шапке топ', 'wpeasy'),
     'sidebar-menu' => __('Меню в сайдбар', 'wpeasy'),
     'footer-menu' => __('Меню в подвал', 'wpeasy')
   ));
@@ -695,7 +719,33 @@ function post_type_product() {
   register_post_type( 'product' , $args );
 }
 
+add_action( 'init', 'taxonomies_types', 0 );
+function taxonomies_types() {
+  // Add new taxonomy, make it hierarchical (like categories)
+  $labels = array(
+    'name'              => 'Types',
+    'singular_name'     => 'Type',
+    'search_items'      => 'Search',
+    'all_items'         => 'All',
+    'parent_item'       => 'Parent',
+    'parent_item_colon' => 'Parent',
+    'edit_item'         => 'Edit',
+    'update_item'       => 'Update',
+    'add_new_item'      => 'Add',
+    'new_item_name'     => 'Add',
+    'menu_name'         => 'Types',
+  );
 
+  $args = array(
+    'hierarchical'      => true,
+    'labels'            => $labels,
+    'show_ui'           => true,
+    'show_admin_column' => true,
+    'query_var'         => true,
+    'rewrite'           => array( 'slug' => 'type' ),
+  );
 
+  register_taxonomy( 'types', array( 'product' ), $args );
+}
 
 ?>
