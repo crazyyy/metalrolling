@@ -24,8 +24,13 @@
           <h6 class="subdescr">Цена: <span><?php the_field('price'); ?></span></h6>
         </article>
 
+        <div class="products-loader">
+        </div><!-- /.products-loader -->
+
         <div class="products-pricetable">
           <h6>Фильтр таблицы:</h6>
+          <div class="products-pricetable--filters-h">
+          </div><!-- /.products-pricetable--filters-h -->
           <div class="products-pricetable--filters">
           </div><!-- /.products-pricetable--filters -->
           <?php $table =  get_field('table_shortcode'); echo do_shortcode($table); ?>

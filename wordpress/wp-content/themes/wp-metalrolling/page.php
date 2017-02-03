@@ -19,7 +19,6 @@
         </article>
       <?php endif; ?>
 
-
     </div><!-- #content-->
   </div><!-- #container-->
 <?php get_footer(); ?>

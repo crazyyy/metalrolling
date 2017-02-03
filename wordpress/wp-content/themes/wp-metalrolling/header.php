@@ -29,10 +29,8 @@
       <header id="header">
         <div class="company">
           <div class="company-logo">
-            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/site-logo_2.png" alt=""></a>
+            <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/logo.png" alt=""></a>
           </div>
-          <div class="company-name">Название компании</div>
-          <div class="company-desc">Металлопрокат</div>
         </div>
         <div class="header-container clearfix">
 

@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		do_action( 'woocommerce_before_single_product_summary' );
 	?>
 
-	<div class="summary entry-summary" style="float: left; padding-left: 20px; width: 75.5%;">
+	<div class="summary entry-summary">
 
 		<?php
 			/**

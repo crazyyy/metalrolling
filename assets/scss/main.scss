@@ -556,14 +556,21 @@ h6 {
 
   width: 530px;
   margin: 35px 0 10px 0;
+  background-image: url(../img/shapka-metall.png);
+  background-repeat: no-repeat;
+  background-size: 40%;
+  background-position: right center;
 }
 
 .company-logo {
   float: left;
 
-  width: 71px;
-  height: 63px;
-  padding-right: 18px;
+  width: 285px;
+  height: 80px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .company-name {
@@ -1623,6 +1630,24 @@ article {
 
       transform: translate(-50%, -50%);
     }
+    .subdescr {
+      font-weight: 700;
+
+      position: absolute;
+      right: 0;
+      bottom: -15px;
+      left: 0;
+
+      padding: 5px 0;
+
+      text-align: center;
+
+      color: #fff;
+      background-color: rgba(0, 0, 0, .82);
+      a {
+        color: #d54739;
+      }
+    }
   }
   h1 {
     font-size: 180%;
@@ -1714,7 +1739,18 @@ article {
     }
   }
 }
+
+.products-loader {
+
+height: 400px;
+background-image: url(../img/loader_gif.gif);
+background-repeat: no-repeat;
+background-position: center;
+
+}
+
 .products-pricetable {
+opacity: 0;
   h6 {
     font-size: 120%;
     font-weight: bold;
@@ -1754,14 +1790,61 @@ article {
 
 .breadcrumbs {
   display: block;
-  list-style-type: none;
+
   margin: 0 0 15px;
   padding: 0;
+
+  list-style-type: none;
   li {
     display: inline-block;
     &.separator {
-      margin-left: 5px;
       margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+}
+.products-pricetable--filters-h {
+  display: flex;
+  flex-direction: row;
+
+  margin: 0 0 15px;
+  margin-bottom: 10px;
+
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: stretch;
+  align-items: center;
+  label {
+    font-weight: bold;
+
+    display: inline-block;
+  }
+}
+.categories--loopers {
+  margin: 0 0 30px;
+  padding: 0;
+  li {
+    display: inline-block;
+
+    width: 250px;
+    margin: 0 10px 10px;
+    a {
+      display: block;
+
+      padding: 0 0 10px;
+
+      text-decoration: none;
+
+      background-color: #f8f8f6;
+    }
+    img {
+      width: 100%;
+    }
+    h2 {
+      margin: 0;
+      padding: 0;
+
+      background: none;
     }
   }
 }

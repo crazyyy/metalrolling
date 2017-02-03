@@ -9,14 +9,20 @@
 
       <div class="loop-products--container clearfix">
         <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
       </div><!-- /.loop-products--container -->
 
       <?php get_template_part('pagination'); ?>
+
+      <div class="content-container">
+
+        <?php
+        // vars
+        $queried_object = get_queried_object();
+        $taxonomy = $queried_object->taxonomy;
+        $term_id = $queried_object->term_id;
+        ?>
+        <?php the_field('description', $taxonomy . '_' . $term_id); ?>
+      </div><!-- /.content-container -->
 
     </div><!-- #content-->
   </div><!-- #container-->
