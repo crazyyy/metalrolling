@@ -4439,6 +4439,8 @@ jQuery(document).ready(function($) {
     "language": DataTables_language["ru_RU"],
     "order": [],
     "orderClasses": false,
+    "ordering": false,
+    "info": false,
     "stripeClasses": ['even', 'odd'],
     "pagingType": "simple",
 

@@ -554,12 +554,13 @@ h6 {
 .company {
   float: left;
 
-  width: 530px;
+  width: 650px;
   margin: 35px 0 10px 0;
+
   background-image: url(../img/shapka-metall.png);
   background-repeat: no-repeat;
-  background-size: 40%;
   background-position: right center;
+  background-size: 46%;
 }
 
 .company-logo {
@@ -594,7 +595,7 @@ h6 {
 .header-container {
   float: right;
 
-  width: 550px;
+  width: 450px;
   margin: 35px 0 20px 0;
 
   @extend .clearfix;
@@ -607,16 +608,53 @@ h6 {
     padding: 0;
 
     list-style-type: none;
-    a {
-      font-family: 'Roboto-Regular';
-      font-size: 20px;
-      font-weight: bold;
+    li {
+      position: relative;
 
-      text-decoration: none;
+      margin: 0 0 15px;
+      padding: 0 0 0 20px;
+      &:before {
+        position: absolute;
+        top: 2px;
+        left: 0;
 
-      color: #fff;
-      &:hover {
+        display: block;
+
+        width: 15px;
+        height: 15px;
+
+        content: '';
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+      }
+      a {
+        font-family: 'Roboto-Regular';
+        font-size: 16px;
+        font-weight: bold;
+
+        text-decoration: none;
+
         color: #ffd200;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:nth-child(1) {
+        &:before {
+          background-image: url(../img/calculator.png);
+        }
+      }
+      &:nth-child(2) {
+        &:before {
+          background-image: url(../img/cube.png);
+        }
+      }
+      &:nth-child(3) {
+        &:before {
+          background-image: url(../img/directory-submission-symbol.png);
+        }
       }
     }
   }
@@ -1675,7 +1713,27 @@ article {
 
     background: none;
     span {
-      font-weight: bold;
+      color: #d54739;
+    }
+  }
+}
+.subdescr-loop {
+  font-size: 12px;
+  font-weight: normal;
+
+  margin: 0 0 10px;
+padding: 0 10px 0 0;
+  color: #00aeff;
+  background-color: transparent;
+  span {
+    font-weight: bold;
+
+    display: block;
+  }
+  &.subdescr-loop-pricer {
+    color: #d54739;
+    span {
+      color: #00aeff;
     }
   }
 }
@@ -1741,16 +1799,15 @@ article {
 }
 
 .products-loader {
+  height: 400px;
 
-height: 400px;
-background-image: url(../img/loader_gif.gif);
-background-repeat: no-repeat;
-background-position: center;
-
+  background-image: url(../img/loader_gif.gif);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .products-pricetable {
-opacity: 0;
+  opacity: 0;
   h6 {
     font-size: 120%;
     font-weight: bold;
@@ -1784,6 +1841,9 @@ opacity: 0;
     margin: 0 5px 10px;
     .inner-title {
       font-weight: bold;
+
+      margin: 0;
+      padding: 10px 0;
     }
   }
 }
