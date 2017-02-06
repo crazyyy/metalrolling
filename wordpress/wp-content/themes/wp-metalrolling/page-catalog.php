@@ -11,19 +11,21 @@
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
           <h1 class="page-title inner-title"><?php the_title(); ?></h1>
 
-          <?php $terms = get_field('categories'); if( $terms ): ?>
+          <?php $posts = get_field('choose_subcat_page'); if( $posts ): ?>
             <ul class="categories--loopers clearfix">
-              <?php foreach( $terms as $term ): ?>
+              <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
+              <?php setup_postdata($post); ?>
                 <li>
-                  <a href="<?php echo get_term_link( $term ); ?>">
-                    <?php $image = get_field('image', $term); if( !empty($image) ): ?>
-                      <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                  <a href="<?php the_permalink(); ?>">
+                    <?php if ( has_post_thumbnail()) : the_post_thumbnail('medium'); else: ?>
+                      <img src="<?php echo catchFirstImage(); ?>" title="<?php the_title(); ?>" alt="<?php the_title(); ?>" />
                     <?php endif; ?>
-                    <h2><?php echo $term->name; ?></h2>
+                    <h2><?php the_title(); ?></h2>
                   </a>
                 </li>
               <?php endforeach; ?>
-            </ul><!-- categories--loopers -->
+            </ul>
+            <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
           <?php endif; ?>
 
           <?php the_content(); ?>

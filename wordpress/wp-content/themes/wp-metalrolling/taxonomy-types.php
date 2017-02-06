@@ -19,10 +19,6 @@
 
       <div class="loop-products--container clearfix">
         <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
-        <?php get_template_part('loop-products'); ?>
       </div><!-- /.loop-products--container -->
 
       <?php get_template_part('pagination'); ?>
