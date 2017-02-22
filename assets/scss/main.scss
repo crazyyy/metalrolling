@@ -553,14 +553,13 @@ h6 {
 
 .company {
   float: left;
-
-  width: 650px;
-  margin: 35px 0 10px 0;
-
+  width: 690px;
+  padding-bottom: 20px;
+  margin: 40px 0 0;
   background-image: url(../img/shapka-metall.png);
   background-repeat: no-repeat;
-  background-position: right center;
-  background-size: 46%;
+  background-position: right 0;
+  background-size: 54%;
 }
 
 .company-logo {
@@ -605,18 +604,18 @@ h6 {
 
     width: 60%;
     margin: 0;
-    padding: 0;
+padding: 5px 0 0;
 
     list-style-type: none;
     li {
       position: relative;
 
       margin: 0 0 15px;
-      padding: 0 0 0 20px;
+      padding: 0 0 0 60px;
       &:before {
         position: absolute;
-        top: 2px;
-        left: 0;
+        top: 0;
+        left: 37px;
 
         display: block;
 
@@ -631,14 +630,14 @@ h6 {
       }
       a {
         font-family: 'Roboto-Regular';
-        font-size: 16px;
-        font-weight: bold;
+        font-size: 13px;
+        font-weight: normal;
 
-        text-decoration: none;
+        text-decoration: underline;
 
         color: #ffd200;
         &:hover {
-          text-decoration: underline;
+          text-decoration: none;
         }
       }
       &:nth-child(1) {
@@ -722,7 +721,7 @@ h6 {
 
 .site-phone {
   font-family: 'Roboto-Regular';
-
+padding-top: 10px;
   float: right;
 
   width: 40%;
@@ -1907,5 +1906,14 @@ article {
 
       background: none;
     }
+  }
+}
+.loop-relative {
+  h4 {
+    font-size: 26px;
+
+    margin: 0 0 20px;
+
+    background: none;
   }
 }

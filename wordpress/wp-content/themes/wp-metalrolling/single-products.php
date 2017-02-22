@@ -33,8 +33,12 @@
           </div><!-- /.products-pricetable--filters-h -->
           <div class="products-pricetable--filters">
           </div><!-- /.products-pricetable--filters -->
-          <?php $table =  get_field('table_shortcode'); echo do_shortcode($table); ?>
+          <?php $table =  get_field('table_shortcode'); /*  echo do_shortcode($table); */ ?>
         </div><!-- /.products-pricetable -->
+
+       <?php $liser =  do_shortcode($table);  var_dump($liser); ?>
+
+        <?php get_template_part('relative-products'); ?>
 
       <?php endwhile; else: ?>
         <article>
